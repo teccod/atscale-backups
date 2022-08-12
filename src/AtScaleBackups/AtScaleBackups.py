@@ -10,7 +10,7 @@ import json
 import subprocess
 import sys
 
-config_path = "/opt/irisapp/src/AtScaleBackups/config.ini"
+config_path = "/irisdev/app/src/AtScaleBackups/config.ini"
 config = ConfigParser()
 config.sections()
 config.read(config_path)
@@ -55,6 +55,7 @@ def create_file():
         }).json()
 
 def start():
+    config.read(config_path)
     create_file()
     s.run()
     
@@ -75,3 +76,5 @@ def setConfig(username, token, repo, delay, atscale_host, atscale_org, atscale_l
 
     with(open(config_path, "w")) as config_file:
         config.write(config_file)
+
+    config.read(config_path)

@@ -9,7 +9,7 @@
 		"password": "SYS",
 		"docker-compose": {
 			"service": "iris",
-			"internalPort": 52773
+			"internalPort": 32792
 		},
 		"links": {
 			"DSW Dashboards": "http://localhost:${port}/dsw/index.html#/IRISAPP/",
@@ -26,7 +26,7 @@
 			"showSystem": false,
 			"previewLimit": 50,
 			"server": "localhost",
-			"port": 32791,
+			"port": 32792,
 			"askForPassword": false,
 			"driver": "InterSystems IRIS",
 			"name": "iris",
