@@ -28,8 +28,8 @@ PROJECTS = config['AtScale']['PROJECTS']
 
 
 def get_bearer_token():
-        token = base64.b64encode((f"{ATSCALE_LOGIN}:{ATSCALE_PASSWORD}").encode()).decode()
-        return requests.get(f"http://{ATSCALE_HOST}/{ATSCALE_ORG}/auth", headers={'Authorization': f"Basic {token}"}).content.decode()
+    token = base64.b64encode((f"{ATSCALE_LOGIN}:{ATSCALE_PASSWORD}").encode()).decode()
+    return requests.get(f"http://{ATSCALE_HOST}/{ATSCALE_ORG}/auth", headers={'Authorization': f"Basic {token}"}).content.decode()
 
 def get_file(project_id):
     return requests.get(f"http://{ATSCALE_HOST}/api/1.0/org/{ATSCALE_ORG}/project/{project_id}/xml",
@@ -47,8 +47,8 @@ def create_file():
     for item in json.loads(config["AtScale"]["PROJECTS"]):
         path = f"/AtScale_backups/{current_time}/{item['name']}.xml"
         requests.put(f"https://api.github.com/repos/{USERNAME}/{REPO}/contents{path}", auth=("token", TOKEN), json={
-            "owner" : "asda",
-            "repo" : "test-atscale",
+            "owner" : USERNAME,
+            "repo" : REPO,
             "path" : path,
             "message" : f"Backup {current_time}",
             "content": base64.b64encode(str(get_file(item['id'])).encode()).decode()
