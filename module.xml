@@ -3,7 +3,7 @@
   <Document name="atscale-backups.ZPM">
     <Module>
       <Name>atscale-backups</Name>
-      <Version>1.0.0</Version>
+      <Version>1.0.1</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="AtScaleBackups.utils.CLS"/>
