@@ -58,10 +58,6 @@ def start():
     config.read(config_path)
     create_file()
     s.run()
-    
-def setup():
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "configparser"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
 
 def setConfig(username, token, repo, delay, atscale_host, atscale_org, atscale_login, atscale_password, atscale_projects):
     config.set("GitHub", "USERNAME", username)
