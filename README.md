@@ -6,6 +6,7 @@ Install this package by ZPM applet in IRIS BI.
 ```
 zpm "install atscale-backups"
 ```
+# Setup
 After installation complete you have to configure module. You need know Adaptive Analytics servername, credentials, GitHub token and repository 
 ```
 d ##class(AtScaleBackups.utils).setConfig(
