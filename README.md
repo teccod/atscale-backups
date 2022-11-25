@@ -30,7 +30,7 @@ Project ID is also available from the URL:
 Module store its config in the /src/AtScaleBackups/config.ini file.
 
 # Launch
-To start backup process you yave to execute this command in IRIS
+To start backup process you have to execute this command in IRIS
 ```
 d ##class(AtScaleBackups.utils).start()
 ```
